@@ -3,8 +3,12 @@ import "../styles/LoginPage.css";
 import popcornLogo from "../assets/logos/moodie-popcorn.png";
 import { FaRegUser } from 'react-icons/fa';
 import { FaLock } from 'react-icons/fa';
+import { useState } from "react";
 
 function LoginPage() {
+
+  const [action, setAction] = useState({})
+
   return (
     <div className="login-page">
       <LoginNavBar />
@@ -28,9 +32,15 @@ function LoginPage() {
             <input type="password" placeholder="Password" required/>
           </div>
           
-          <button className="login-btn" type="submit">
-            Sign In
-          </button>
+          <div className="buttons">
+            <button className="sign-up-btn" type="submit">
+            Sign Up
+            </button>
+            
+            <button className="login-btn" type="submit">
+            Login
+            </button>
+          </div>
 
         </form>
       </div>
